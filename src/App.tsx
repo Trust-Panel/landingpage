@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { ThemeProvider, CssBaseline, useMediaQuery } from '@mui/material';
+import { useEffect } from 'react';
+import { ThemeProvider, CssBaseline } from '@mui/material';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import theme from './theme';
 
@@ -13,6 +13,7 @@ import Cta from './components/Cta';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ScreenshotSlider from './components/ScreenshotSlider';
 
 function App() {
   useEffect(() => {
@@ -54,7 +55,7 @@ function App() {
         <Navbar />
         <Hero />
         <Features />
-        {/* <ScreenshotSlider /> */}
+        <ScreenshotSlider />
         <Pricing />
         <Cta />
         <ContactForm />

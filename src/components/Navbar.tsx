@@ -15,7 +15,7 @@ import {
   Slide,
 } from "@mui/material";
 import { Menu, X } from "lucide-react";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logo-retangular.png";
 interface Props {
   window?: () => Window;
   children: React.ReactElement;
@@ -93,11 +93,12 @@ const Navbar = () => {
           <X />
         </IconButton>
       </Box>
-      <Box component="span" sx={{ display: "flex", alignItems: "center" }}>
+      <Box component="span" sx={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
         <img
           src={Logo}
           alt="logo Trust Panel"
-          style={{ width: "250px", height: "250px" }}
+          style={{ width: "250px", height: "150px" }}
+
         />
       </Box>
       <List>
@@ -138,7 +139,7 @@ const Navbar = () => {
             <img
             src={Logo}
             alt="logo Trust Panel"
-            style={{ width: "50px", height: "50px" }}
+            style={{ width: "135px", height: "85px", marginTop: '-10px' }}
           />
 
               <Box sx={{ display: { xs: "none", md: "flex" } }}>

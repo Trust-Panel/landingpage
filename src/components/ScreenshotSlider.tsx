@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { 
   Box, 
   Container, 
   Typography, 
-  useTheme, 
-  useMediaQuery,
   Paper,
   Grid,
   Button
@@ -18,8 +16,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { screenshots } from '../data/screenshots';
 
 const ScreenshotSlider = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [activeIndex, setActiveIndex] = useState(0);
   const [swiper, setSwiper] = useState<any>(null);
 
@@ -113,7 +109,7 @@ const ScreenshotSlider = () => {
             }}
             loop={true}
             autoplay={{
-              delay: 5000,
+              delay: 50000,
               disableOnInteraction: false,
             }}
             onSlideChange={handleSlideChange}
@@ -140,7 +136,8 @@ const ScreenshotSlider = () => {
                     sx={{
                       width: '100%',
                       height: { xs: '250px', sm: '350px', md: '500px' },
-                      objectFit: 'cover',
+                      objectFit: 'cover',  
+                      objectPosition: 'top', 
                     }}
                   />
                 </Paper>
@@ -148,9 +145,7 @@ const ScreenshotSlider = () => {
             ))}
           </Swiper>
           
-          {/* Custom navigation buttons */}
           <Button 
-            className="swiper-button-prev" 
             sx={{
               position: 'absolute',
               top: '50%',
@@ -174,7 +169,6 @@ const ScreenshotSlider = () => {
             <ChevronLeft size={20} />
           </Button>
           <Button 
-            className="swiper-button-next" 
             sx={{
               position: 'absolute',
               top: '50%',
