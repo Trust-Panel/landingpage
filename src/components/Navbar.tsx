@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { 
-  AppBar, 
-  Box, 
-  Toolbar, 
-  Typography, 
-  Button, 
+import React, { useState, useEffect } from "react";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Button,
   Container,
   IconButton,
   Drawer,
@@ -13,10 +12,10 @@ import {
   ListItemButton,
   ListItemText,
   useScrollTrigger,
-  Slide
-} from '@mui/material';
-import { Menu, X, ShieldCheck } from 'lucide-react';
-
+  Slide,
+} from "@mui/material";
+import { Menu, X } from "lucide-react";
+import Logo from "../../assets/logo.png";
 interface Props {
   window?: () => Window;
   children: React.ReactElement;
@@ -36,11 +35,11 @@ function HideOnScroll(props: Props) {
 }
 
 const navItems = [
-  { name: 'Início', href: '#home' },
-  { name: 'Recursos', href: '#features' },
-  { name: 'Screenshots', href: '#screenshots' },
-  { name: 'Preços', href: '#pricing' },
-  { name: 'Contato', href: '#contact' },
+  { name: "Início", href: "#home" },
+  { name: "Recursos", href: "#features" },
+  { name: "Screenshots", href: "#screenshots" },
+  { name: "Preços", href: "#pricing" },
+  { name: "Contato", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -55,9 +54,9 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [scrolled]);
 
@@ -68,7 +67,7 @@ const Navbar = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.querySelector(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     if (mobileOpen) {
       setMobileOpen(false);
@@ -76,34 +75,42 @@ const Navbar = () => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2 }}>
-        <Typography variant="h6" sx={{ fontFamily: 'Montserrat', fontWeight: 700 }}>
-          <Box component="span" sx={{ display: 'flex', alignItems: 'center' }}>
-            <ShieldCheck size={24} color="#4A90E2" />
-            <Box component="span" sx={{ ml: 1 }}>TrustPanel</Box>
-          </Box>
-        </Typography>
-        <IconButton 
-          edge="start" 
-          color="inherit" 
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          p: 2,
+        }}
+      >
+        <IconButton
+          edge="start"
+          color="inherit"
           aria-label="close-menu"
           onClick={handleDrawerToggle}
         >
           <X />
         </IconButton>
       </Box>
+      <Box component="span" sx={{ display: "flex", alignItems: "center" }}>
+        <img
+          src={Logo}
+          alt="logo Trust Panel"
+          style={{ width: "250px", height: "250px" }}
+        />
+      </Box>
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
             <ListItemButton
               onClick={() => scrollToSection(item.href)}
-              sx={{ textAlign: 'center' }}
+              sx={{ textAlign: "center" }}
             >
-              <ListItemText 
-                primary={item.name} 
+              <ListItemText
+                primary={item.name}
                 primaryTypographyProps={{
-                  fontFamily: 'Montserrat',
+                  fontFamily: "Montserrat",
                   fontWeight: 600,
                 }}
               />
@@ -117,56 +124,53 @@ const Navbar = () => {
   return (
     <>
       <HideOnScroll>
-        <AppBar 
-          position="fixed" 
+        <AppBar
+          position="fixed"
           elevation={scrolled ? 4 : 0}
           sx={{
-            backgroundColor: scrolled ? 'primary.main' : 'transparent',
-            transition: 'background-color 0.3s ease',
+            backgroundColor: scrolled ? "primary.main" : "transparent",
+            transition: "background-color 0.3s ease",
             boxShadow: scrolled ? 4 : 0,
           }}
         >
           <Container maxWidth="lg">
-            <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-              <Typography variant="h6" component="div" sx={{ 
-                fontFamily: 'Montserrat', 
-                fontWeight: 700,
-                color: scrolled ? 'white' : 'primary.main',
-                display: 'flex',
-                alignItems: 'center'
-              }}>
-                <ShieldCheck size={28} color={scrolled ? '#FFFFFF' : '#1F2A44'} />
-                <Box component="span" sx={{ ml: 1 }}>TrustPanel</Box>
-              </Typography>
-              
-              <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+            <img
+            src={Logo}
+            alt="logo Trust Panel"
+            style={{ width: "50px", height: "50px" }}
+          />
+
+              <Box sx={{ display: { xs: "none", md: "flex" } }}>
                 {navItems.map((item) => (
-                  <Button 
+                  <Button
                     key={item.name}
                     onClick={() => scrollToSection(item.href)}
-                    sx={{ 
-                      color: scrolled ? 'white' : 'primary.main',
+                    sx={{
+                      color: scrolled ? "white" : "primary.main",
                       ml: 2,
-                      fontFamily: 'Montserrat',
+                      fontFamily: "Montserrat",
                       fontWeight: 600,
-                      '&:hover': {
-                        backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.1)' : 'rgba(31, 42, 68, 0.1)',
-                      }
+                      "&:hover": {
+                        backgroundColor: scrolled
+                          ? "rgba(255, 255, 255, 0.1)"
+                          : "rgba(31, 42, 68, 0.1)",
+                      },
                     }}
                   >
                     {item.name}
                   </Button>
                 ))}
               </Box>
-              
+
               <IconButton
                 color="inherit"
                 aria-label="open drawer"
                 edge="end"
                 onClick={handleDrawerToggle}
-                sx={{ 
-                  display: { md: 'none' },
-                  color: scrolled ? 'white' : 'primary.main',
+                sx={{
+                  display: { md: "none" },
+                  color: scrolled ? "white" : "primary.main",
                 }}
               >
                 <Menu />
@@ -176,7 +180,6 @@ const Navbar = () => {
         </AppBar>
       </HideOnScroll>
       <Toolbar /> {/* Spacer for fixed AppBar */}
-      
       <Drawer
         variant="temporary"
         open={mobileOpen}
@@ -185,8 +188,8 @@ const Navbar = () => {
           keepMounted: true, // Better open performance on mobile
         }}
         sx={{
-          display: { xs: 'block', md: 'none' },
-          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 280 },
+          display: { xs: "block", md: "none" },
+          "& .MuiDrawer-paper": { boxSizing: "border-box", width: 280 },
         }}
       >
         {drawer}

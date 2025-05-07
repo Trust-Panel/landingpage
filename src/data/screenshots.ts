@@ -32,12 +32,3 @@ export const screenshots: ScreenshotItem[] = [
     description: "Acesse informações detalhadas de cada certificado, incluindo histórico de alterações e dados do titular."
   }
 ];
-
-// Sistema screenshots for reference
-/*
-Dashboard:
-<img src="data:image/png;base64,...">
-
-Meus Certificados:
-<img src="data:image/png;base64,...">
-*/
