@@ -29,7 +29,7 @@ const Cta = () => {
             borderRadius: 4,
             overflow: 'hidden',
             position: 'relative',
-            background: 'linear-gradient(135deg, #1F2A44 0%, #324775 100%)',
+            background: 'linear-gradient(135deg, #459a78 0%, #6fe2b4 100%)',
           }}
         >
           {/* Pattern overlay */}
@@ -55,7 +55,7 @@ const Cta = () => {
           >
             <Grid item xs={12} md={8}>
               <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
-                <ShieldCheck size={isMobile ? 48 : 56} color="#4A90E2" style={{ marginBottom: '1rem' }} />
+                <ShieldCheck size={isMobile ? 48 : 56} color="#FFFFFF" style={{ marginBottom: '1rem' }} />
                 <Typography
                   variant="h2"
                   sx={{
@@ -116,7 +116,7 @@ const Cta = () => {
                 sx={{
                   width: '250px',
                   height: '250px',
-                  background: 'radial-gradient(circle, rgba(74, 144, 226, 0.8) 0%, rgba(74, 144, 226, 0) 70%)',
+                  background: 'radial-gradient(circle, rgba(111, 226, 180, 0.8) 0%, rgba(69, 154, 120, 0.2) 70%)',
                   borderRadius: '50%',
                   display: 'flex',
                   alignItems: 'center',
