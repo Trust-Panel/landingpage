@@ -16,6 +16,7 @@ import {
 } from "@mui/material";
 import { Menu, X } from "lucide-react";
 import Logo from "../../assets/logo-retangular.png";
+import Logo2 from "../../assets/branca.png";
 interface Props {
   window?: () => Window;
   children: React.ReactElement;
@@ -137,7 +138,7 @@ const Navbar = () => {
           <Container maxWidth="lg">
             <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
             <img
-            src={Logo}
+            src={scrolled ? Logo2 : Logo}
             alt="logo Trust Panel"
             style={{ width: "135px", height: "85px", marginTop: '-10px' }}
           />

@@ -2,49 +2,44 @@ import { PricingPlan } from '../types';
 
 export const pricingPlans: PricingPlan[] = [
   {
-    title: "Básico",
-    price: 39.90,
-    description: "Ideal para pequenas empresas ou profissionais iniciantes.",
+    title: "Start",
+    price: 147.00,
+    description: "Solução essencial para pequenas empresas e profissionais autônomos.",
     features: [
-      "Até 50 certificados",
+      "Até 5 usuários",
       "Suporte por e-mail",
       "Alertas de vencimento",
-      "1 usuário administrador",
-      "Histórico básico"
+      "Interface Web simples"
     ],
-    certificateRange: "0-50 certificados",
-    ctaText: "Começar agora"
+    certificateRange: "1-50 certificados",
+    ctaText: "Falar com consultor"
   },
   {
-    title: "Profissional",
-    price: 69.90,
-    description: "Perfeito para empresas em crescimento que precisam de mais recursos.",
+    title: "Pro",
+    price: 397.00,
+    description: "A escolha ideal para empresas em crescimento que buscam mais recursos e flexibilidade.",
     features: [
-      "50-200 certificados",
-      "Suporte prioritário",
-      "Alertas personalizados",
-      "3 usuários administradores",
-      "Histórico completo",
-      "Automação básica"
+      "Até 20 usuários",
+      "Auditoria básica",
+      "Importação em massa",
+      "Alertas e notificações avançadas",
+      "Suporte via e-mail e Whatsapp"
     ],
-    certificateRange: "50-200 certificados",
-    ctaText: "Experimentar grátis",
+    certificateRange: "Ilimitado",
+    ctaText: "Falar com consultor",
     highlighted: true
   },
   {
-    title: "Empresarial",
-    price: 109.90,
-    description: "Solução completa para grandes empresas com necessidades avançadas.",
+    title: "Enterprise",
+    price: 947.00,
+    description: "Solução robusta para grandes empresas com demandas complexas e alto volume de certificados.",
     features: [
-      "Acima de 200 certificados",
-      "Suporte 24/7",
-      "Alertas avançados",
-      "Usuários ilimitados",
-      "Histórico completo",
-      "Automação avançada",
-      "Gestão de equipes"
+      "Single Sign-On",
+      "Relatórios de conformidade",
+      "API completa",
+      "Suporte prioritário"
     ],
-    certificateRange: "Acima de 200 certificados",
+    certificateRange: "Ilimitado",
     ctaText: "Falar com consultor"
   }
 ];
