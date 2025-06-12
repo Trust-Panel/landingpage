@@ -138,10 +138,10 @@ const Pricing = () => {
                     <Typography 
                       variant="h4" 
                       component="div" 
-                      gutterBottom 
                       sx={{ 
                         fontWeight: 700,
                         color: plan.highlighted ? 'secondary.main' : 'primary.main',
+                        mb: 3,
                       }}
                     >
                       {plan.title}
@@ -158,7 +158,7 @@ const Pricing = () => {
                     >
                       {plan.description}
                     </Typography>
-                    <Box sx={{ display: 'flex', alignItems: 'baseline', mb: 1 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'baseline', mb: 0 }}>
                       <Typography 
                         variant="h3" 
                         component="span" 
@@ -184,11 +184,11 @@ const Pricing = () => {
                         fontWeight: 500,
                         display: 'flex',
                         alignItems: 'center',
-                        mb: 2,
+                        mb: 0,
                       }}
                     >
-                      <CheckCircle2 size={16} style={{ marginRight: '4px' }} />
-                      {plan.certificateRange}
+                      {/* <CheckCircle2 size={16} style={{ marginRight: '4px' }} /> 
+                      {plan.certificateRange}} */}
                     </Typography>
                   </Box>
 
