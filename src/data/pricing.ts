@@ -20,7 +20,7 @@ export const pricingPlans: PricingPlan[] = [
       "Até 20 usuários",
       "Até 500 certificados"
     ],
-    certificateRange: "Até 500 certificados",
+    certificateRange: "",
     ctaText: "Falar com consultor",
     highlighted: true
   },
