@@ -316,9 +316,9 @@ const ContactForm = () => {
                         onChange={handleSelectChange}
                         disabled={isSubmitting}
                       >
-                        <MenuItem value="Plano Básico">Plano Básico (0-50 certificados)</MenuItem>
-                        <MenuItem value="Plano Profissional">Plano Profissional (50-200 certificados)</MenuItem>
-                        <MenuItem value="Plano Empresarial">Plano Empresarial (200+ certificados)</MenuItem>
+                        <MenuItem value="Plano Start">Plano Start (Até 50 certificados)</MenuItem>
+                        <MenuItem value="Plano Pro">Plano Pro (Até 500 certificados)</MenuItem>
+                        <MenuItem value="Plano Enterprise">Plano Enterprise (Certificados ilimitados)</MenuItem>
                         <MenuItem value="Solução Personalizada">Solução Personalizada</MenuItem>
                         <MenuItem value="Apenas Informações">Apenas Informações</MenuItem>
                       </Select>

@@ -7,11 +7,9 @@ export const pricingPlans: PricingPlan[] = [
     description: "Solução essencial para pequenas empresas e profissionais autônomos.",
     features: [
       "Até 5 usuários",
-      "Suporte por e-mail",
-      "Alertas de vencimento",
-      "Interface Web simples"
+      "Até 50 certificados",
     ],
-    certificateRange: "1-50 certificados",
+    certificateRange: "",
     ctaText: "Falar com consultor"
   },
   {
@@ -20,12 +18,9 @@ export const pricingPlans: PricingPlan[] = [
     description: "A escolha ideal para empresas em crescimento que buscam mais recursos e flexibilidade.",
     features: [
       "Até 20 usuários",
-      "Auditoria básica",
-      "Importação em massa",
-      "Alertas e notificações avançadas",
-      "Suporte via e-mail e Whatsapp"
+      "Até 500 certificados"
     ],
-    certificateRange: "Ilimitado",
+    certificateRange: "Até 500 certificados",
     ctaText: "Falar com consultor",
     highlighted: true
   },
@@ -34,12 +29,10 @@ export const pricingPlans: PricingPlan[] = [
     price: 947.00,
     description: "Solução robusta para grandes empresas com demandas complexas e alto volume de certificados.",
     features: [
-      "Single Sign-On",
-      "Relatórios de conformidade",
-      "API completa",
-      "Suporte prioritário"
+      "Até 50 usuários",
+      "Certificados ilimitados"
     ],
-    certificateRange: "Ilimitado",
+    certificateRange: "", 
     ctaText: "Falar com consultor"
   }
 ];
