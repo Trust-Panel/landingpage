@@ -224,7 +224,7 @@ const ContactForm = () => {
                       Email
                     </Typography>
                     <Typography variant="body1" fontWeight={500}>
-                      comercial@trustpannel.com.br
+                      trustpanel@outlook.com.br
                     </Typography>
                   </Box>
                 </Box>
